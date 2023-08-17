@@ -10,7 +10,7 @@
 - Authenticate 
 - Multiple Shops 
 - buy items
-- add to card
+- add to cart
 - Checkout
 - Recieve confirmation of order
 

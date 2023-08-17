@@ -68,6 +68,7 @@ exports.checkOut = async (req, res, next) => {
       quantity: i.quantity,
       ...i.productId,
     }));
+    console.log(items, "items from checkout");
     await sendMail(req.user.email, items);
     res.status(200).json({ message: "Cart Checked Out" });
   } catch (err) {

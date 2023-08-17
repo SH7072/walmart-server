@@ -8,15 +8,16 @@ const DB = process.env.DATABASE_STRING;
 
 console.log(DB);
 mongoose
-  .connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then((_) => {
-    console.log("Database successfully connected");
-  });
+    .connect(DB, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    })
+    .then((_) => {
+        console.log("Database successfully connected");
+    });
 
 const app = require("./app");
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}`);
+    console.log(`App running on port ${PORT}`);
 });
+

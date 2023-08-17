@@ -8,7 +8,7 @@ exports.addProduct = async (req, res, next) => {
   product
     .save()
     .then((result) => {
-      console.log(result);
+      // console.log(result);
       res.status(200).json({
         status: "success",
         data: result,
@@ -22,7 +22,7 @@ exports.addProduct = async (req, res, next) => {
 exports.getProducts = async (req, res, next) => {
   Product.find()
     .then((products) => {
-      console.log(products);
+      // console.log(products);
       res.status(200).json({
         status: "success",
         data: products,
@@ -37,7 +37,7 @@ exports.getById = async (req, res, next) => {
   const id = req.params.id;
   Product.findById(id)
     .then((prod) => {
-      console.log(prod);
+      // console.log(prod);
       res.status(200).json({
         status: "success",
         name: prod.name,
@@ -56,7 +56,7 @@ exports.deleteProduct = async (req, res, next) => {
   let id = req.body.id;
   Product.findByIdAndRemove(id)
     .then((result) => {
-      console.log(result);
+      // console.log(result);
       res.status(200).json({
         status: "success",
         data: result,
@@ -71,7 +71,7 @@ exports.updateProduct = (req, res, next) => {
   const { id, name, description, link, img, price } = req.body;
   Product.updateOne({ _id: id }, { name, description, link, img, price })
     .then((result) => {
-      console.log(result);
+      // console.log(result);
       res.status(200).json({ status: "success", data: result });
     })
     .catch((err) => {

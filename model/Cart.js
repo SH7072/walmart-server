@@ -25,12 +25,12 @@ const cartSchema = new Schema({
 
 cartSchema.methods.addToCart = function (productId) {
   const ifExistedIndex = this.items.findIndex((product) => {
-    console.log(product.productId.toString());
-    console.log(productId.toString());
+    // console.log(product.productId.toString());
+    // console.log(productId.toString());
     return product.productId.toString() === productId.toString();
   });
   const updatedCartItems = [...this.items];
-  console.log(ifExistedIndex);
+  // console.log(ifExistedIndex);
   if (ifExistedIndex > -1) {
     let newQuantity = updatedCartItems[ifExistedIndex].quantity + 1;
     updatedCartItems[ifExistedIndex].quantity = newQuantity;
@@ -70,7 +70,7 @@ cartSchema.methods.removeFromCart = function (productId) {
   const updatedCartItems = this.items.filter(
     (item) => item.productId.toString() !== productId.toString()
   );
-  console.log(updatedCartItems);
+  // console.log(updatedCartItems);
   this.items = updatedCartItems;
   return this.save();
 };

@@ -26,7 +26,7 @@ exports.getCharacterData = async (req, res, next) => {
   try {
     const user = await User.findById(req.user.id);
     let characterType;
-    console.log(user);
+    // console.log(user);
     if (user.character_data !== "") {
       const parsedCharacterData = JSON.parse(user.character_data);
       if (parsedCharacterData["settingsName"] === "FemaleSettings")
@@ -50,7 +50,7 @@ exports.getUserData = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);
     let characterType;
-    console.log(user);
+    // console.log(user);
     if (user.character_data !== "") {
       const parsedCharacterData = JSON.parse(user.character_data);
       if (parsedCharacterData["settingsName"] === "FemaleSettings")

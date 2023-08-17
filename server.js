@@ -6,7 +6,7 @@ dotenv.config({ path: "./config.env" });
 const PORT = process.env.PORT || 3001;
 const DB = process.env.DATABASE_STRING;
 
-console.log(DB);
+
 mongoose
     .connect(DB, {
         useNewUrlParser: true,

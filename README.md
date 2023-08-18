@@ -1,9 +1,8 @@
 # MetaVerse
 
+* Frontend: https://github.com/SH7072/Metaphoria
+
 * Live service available at : ```walmart-server.onrender.com```
-
-
-
 
 ## Features
 
@@ -76,6 +75,6 @@ To run this project, you will need to add the following environment variables to
 
 * To install the dependencies run : ```npm install```
 
-* To start the server  : ```node app.js```
+* To start the server  : ```node server.js```
 
-* Then the request can be sent to  : ```http://localhost:3232/```. 
+* Then the request can be sent to  : ```http://localhost:3000/```. 

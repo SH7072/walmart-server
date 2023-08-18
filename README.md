@@ -1,4 +1,4 @@
-# MetaVerse
+# Metaphoria
 
 * Frontend: https://github.com/SH7072/Metaphoria
 
